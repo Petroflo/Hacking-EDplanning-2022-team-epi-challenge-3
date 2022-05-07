@@ -1,6 +1,7 @@
-var map = L.map('map').setView([51.505, -0.09], 13);
-var marker = L.marker([51.5, -0.09]).addTo(map);
-
+// 13.8834, -60.9879
+let map = L.map('map').setView([13.8834, -60.9860], 10);
+let marker = L.marker([13.8834, -60.9879]).addTo(map);
+ 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,

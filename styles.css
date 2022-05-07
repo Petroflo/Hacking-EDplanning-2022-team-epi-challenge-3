@@ -7,12 +7,12 @@
 }
 
 body {
-    height: 100vh;
+    height: 130vh;
     padding:0;
     margin:0;
 
     display:grid;
-    grid-template-rows: 10vh 70vh 20vh;
+    grid-template-rows: 10vh 90vh 30vh;
     grid-template-columns: 100vw;
     
 }
@@ -124,7 +124,7 @@ main {
 }
 
 #map { 
-    height:40vh;
+    height:60vh;
     width:auto;
     margin:5rem;
 }
