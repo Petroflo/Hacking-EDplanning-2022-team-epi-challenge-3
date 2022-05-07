@@ -1,7 +1,7 @@
 
 async function getData() {
   return await new Promise((resolve, reject) => {
-    fetch("../server/Schools Survey for Giga.json")
+    fetch("../server/Data.json")
 
      .then(response => {
         // console.log(response);
