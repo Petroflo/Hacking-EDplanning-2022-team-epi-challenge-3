@@ -25,7 +25,7 @@ async function doto() {
   
   titleL(map);
   process_array(books, map, mapM);
-  my_search(books, map, search, mapM);
+  // my_search(books, map, search, mapM);
 };
 
 console.log(await doto())
@@ -90,3 +90,17 @@ function my_search(books, map, search, mapM) {
         map.removeLayer(mapM[i])
   }
 }
+
+const input = document.querySelector('input');
+const log = document.getElementById('values');
+let searchArray = [];
+
+input.addEventListener('input', updateValue);
+
+function updateValue() {
+   let searchResult = input.value.toLowerCase();
+   searchArray.push(searchResult);
+    console.log(searchArray);
+}
+
+// console.log(searchArray)
