@@ -41,10 +41,65 @@ function titleL(map){
     accessToken: 'pk.eyJ1IjoibWFwZGF5IiwiYSI6ImNsMnZpMG5tdjBjM3kzanBob3FncDF1bm8ifQ.4JAtmIF1-atjwiGwrKTWmQ',
 }).addTo(map);
 
+
+//var circle = circle_danger(map);
+var volcan = volcan_danger(map);
+
+var polygon = polygon_danger(map);
     return map;
 }
 
+function volcan_danger(map) {
+  return L.polygon([
+    [13.896410,-60.968775],
+    [13.956059,-60.924327],
+    //[13.896410,-60.968775],
+    [13.968969,-60.900950],
+    [13.982379,-60.897045],
+    [13.95, -60.95],
+    [13.874413,-60.989983],
+    [13.830079,-61.006110],
+    [13.759061,-61.038021],
+    [13.75, -61.009],
+    [13.70, -60.94],
+    [13.75, -60.94],
+    [13.79, -60.90],
+    [13.79, -60.90],
+    [13.81, -60.96]
+  ], {
+    color: 'red',
+  }).addTo(map);
+}
 
+function polygon_danger(map) {
+  return L.polygon([
+
+    [13.952060,-61.038043],
+    [13.932068,-60.994100],
+    [13.874413,-60.989983],
+    [13.856081,-61.018119],
+    [13.830079,-61.006110],
+    [13.759061,-61.038021],
+    [13.791072,-61.068559],
+    [13.807409,-61.077824],
+    [13.834746,-61.066168],
+    [13.855081,-61.067522],
+    [13.862414,-61.080561],
+    [13.880912,-61.079203],
+    [13.912407,-61.067522],
+    [13.932401,-61.057915],
+    [13.956059,-61.038699]
+    ]).addTo(map);
+}
+
+function circle_danger(map) {
+  return L.circle([13.8834, -60.9890], {
+    color: 'yellow',
+    fillColor: '#ECFF33',
+    fillOpacity: 0.5,
+    radius: 5500
+  }).addTo(map);
+}
 function process_array(books, map, mapM) {
     mapM.splice(0, mapM.length)
     for (let i = 0; i < books.length; i++) {
