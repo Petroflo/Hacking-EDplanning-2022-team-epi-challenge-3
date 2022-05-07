@@ -14,14 +14,17 @@ async function getData() {
    })
  })    
 }
-console.log("hello");
+//console.log("hello");
 async function doto() {
-   console.log("hello2");
+  //console.log("hello2");
 
   let map = L.map('map').setView([13.8834, -60.9860], 10);
-  titleL(map);
+  let search = "";                                        // when reseach a school
   let books = await getData();
+
+  titleL(map);
   process_array(books, map);
+  my_search(books, map, search);
 };
 
 console.log(await doto())
@@ -45,11 +48,41 @@ function process_array(books, map) {
     for (let i = 0; i < books.length; i++) {
         let name1 = books[i].name
         let address1 = books[i].address
-        let shelter = books[i].Shelter_tsunami
-        L.marker([books[i].latitude, books[i].longitude]).addTo(map)
-            .bindPopup(name1+'<br/>'+address1+'<br/>'+'shelter for tsunami:'+shelter)
+        var pos = [books[i].latitude, books[i].longitude]
+        L.marker(pos).addTo(map)
+            .bindPopup(name1+'<br/>'+address1)
             .openPopup();
             
     }
 }
 
+function my_search(books, map, search) {
+  if (search == "")
+    return;
+  for (let i = 0; i < books.length; i++) {
+      var RedIcon = new L.Icon({
+        //https://github.com/pointhi/leaflet-color-markers                                                             ICON DIFFRENT
+        iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+      });
+
+      if (search == books[i].name) {
+        let name1 = books[i].name
+        let address1 = books[i].address
+        let floods = books[i].Shelter_floods
+        let fire = books[i].Shelter_fire
+        let quake = books[i].Shelter_quake
+        let tsunami = books[i].Shelter_tsunami
+        let volcano = books[i].Shelter_volcano
+
+        var pos = [books[i].latitude, books[i].longitude]
+        L.marker(pos, {icon: RedIcon}).addTo(map)
+            .bindPopup("School name: " +name1+'<br/>'+"Address: "+address1+'<br/>'+"Shelter floods: " +floods+'<br/>'+"Shelter fire: " + fire+'<br/>'+"Shelter quake: "+quake+'<br/>'+"Shelter tsunami: "+tsunami+'<br/>'+"Shelter volcano: "+volcano)
+            .openPopup();
+      }
+  }
+}
