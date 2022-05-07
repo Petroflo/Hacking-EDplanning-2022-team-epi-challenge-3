@@ -1,17 +1,8 @@
-
-// let reponseData = fetch('./Schools Survey for Giga.json')
-//   .then( response => {
-//     if (!response.ok) {
-//       throw new Error(`HTTP error: ${response.status}`);
-//     }
-//     return response.json();
-//   })
-// //   .then( json => initialize(json) )
-//   .catch( err => console.error(`Fetch problem: ${err.message}`) );
-
-// let mydata = JSON.parse(reponseData);
-// alert(mydata);
-
+fetch("../server/Schools Survey for Giga.json")
+    .then(Response => Response.json())
+    .then(data => {
+        console.log(data);
+    });
 
 // 13.8834, -60.9879
 let map = L.map('map').setView([13.8834, -60.9860], 10);
