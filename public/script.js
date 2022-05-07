@@ -19,12 +19,13 @@ async function doto() {
   //console.log("hello2");
 
   let map = L.map('map').setView([13.8834, -60.9860], 10);
-  let search = "";                                        // when reseach a school
+  let search = "Clendon Mason Memorial";                                        // when reseach a school
   let books = await getData();
-
+  var mapM = [];
+  
   titleL(map);
-  process_array(books, map);
-  my_search(books, map, search);
+  process_array(books, map, mapM);
+  my_search(books, map, search, mapM);
 };
 
 console.log(await doto())
@@ -44,22 +45,23 @@ function titleL(map){
 }
 
 
-function process_array(books, map) {
+function process_array(books, map, mapM) {
+    mapM.splice(0, mapM.length)
     for (let i = 0; i < books.length; i++) {
         let name1 = books[i].name
         let address1 = books[i].address
         var pos = [books[i].latitude, books[i].longitude]
-        L.marker(pos).addTo(map)
+        var marker = L.marker(pos).addTo(map)
             .bindPopup(name1+'<br/>'+address1)
             .openPopup();
-            
+        mapM.push(marker);
     }
 }
 
-function my_search(books, map, search) {
+function my_search(books, map, search, mapM) {
   if (search == "")
     return;
-  for (let i = 0; i < books.length; i++) {
+    for (let i = 0; i < books.length; i++) {
       var RedIcon = new L.Icon({
         //https://github.com/pointhi/leaflet-color-markers                                                             ICON DIFFRENT
         iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
@@ -69,7 +71,7 @@ function my_search(books, map, search) {
         popupAnchor: [1, -34],
         shadowSize: [41, 41]
       });
-
+      
       if (search == books[i].name) {
         let name1 = books[i].name
         let address1 = books[i].address
@@ -78,11 +80,13 @@ function my_search(books, map, search) {
         let quake = books[i].Shelter_quake
         let tsunami = books[i].Shelter_tsunami
         let volcano = books[i].Shelter_volcano
-
+        
         var pos = [books[i].latitude, books[i].longitude]
         L.marker(pos, {icon: RedIcon}).addTo(map)
-            .bindPopup("School name: " +name1+'<br/>'+"Address: "+address1+'<br/>'+"Shelter floods: " +floods+'<br/>'+"Shelter fire: " + fire+'<br/>'+"Shelter quake: "+quake+'<br/>'+"Shelter tsunami: "+tsunami+'<br/>'+"Shelter volcano: "+volcano)
-            .openPopup();
+        .bindPopup("School name: " +name1+'<br/>'+"Address: "+address1+'<br/>'+"Shelter floods: " +floods+'<br/>'+"Shelter fire: " + fire+'<br/>'+"Shelter quake: "+quake+'<br/>'+"Shelter tsunami: "+tsunami+'<br/>'+"Shelter volcano: "+volcano)
+        .openPopup();
       }
+      else
+        map.removeLayer(mapM[i])
   }
 }
