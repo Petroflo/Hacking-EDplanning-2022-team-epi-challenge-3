@@ -49,7 +49,6 @@ var polygon = polygon_danger(map);
     return map;
 }
 
-
 function volcan_danger(map) {
   return L.polygon([
     [13.896410,-60.968775],
