@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.46.0/dist/L.Control.Locate.min.css" />
+
+   <script type="module" src="script.js" defer></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>vulcano eruption</title>
+</head>
+
+<body>
+
+
+  <header>
+
+  <div class='image-logo'> 
+    <a href="index.html">
+        <img src="images/map-icon.png" alt="logo"> 
+    </a>
+  </div>
+
+  <nav id="header-nav">
+    <ul>
+      <li class="how-we-work"><a href="" class="how-we-work">WHAT WE DO</a></li>
+      <li><a href="#">STATS</a></li>
+      <li id="account"><a href="#">ACCOUNT</a></li>
+      <li id="view-plans"><a href="warning_zone.html">VIEW MAPS</a></li>
+    </ul>
+  </nav>
+
+  <div class="hamburger-containment">
+    <div class="hamburger-line"></div>
+    <div class="hamburger-line"></div>
+    <div class="hamburger-line"></div>
+  </div>
+</header>
+
+
+<div class="container">
+    <div class="row">
+        <main id="main">
+            <div class="wrapper">
+                <div class="three_col">
+                    <div class="three_col_left">
+                        <div class="two_col_left_inner">
+                            <nav class="sidenav">
+                                <div class="row align-items-center">
+                                    <div class="col-3 offset-4">
+                                        <h2 class="sidenav-heading">
+                                            <a class="btn btn-danger" style="display: flex; justify-content: center; align-items: center;" href="index.html" aria-current="&quot;page&quot;">Find the nearest shelter</a>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="three_col_middle">
+                        <div class="two_col_middle_inner main-content">
+                            <h1>What to do during a volcanic eruption</h1>
+                            <ul class="list-group-numbered">
+                                <li class="list-group-item">Listen to the radio for civil defence advice and follow instructions.</li>
+                                <li class="list-group-item">If outside at the time of eruption, seek shelter in a car or a building. If caught in volcanic ashfalls, wear a dust mask or use a handkerchief or cloth over your nose and mouth.</li>
+                                <li class="list-group-item">Stay indoors as volcanic ash is a health hazard, especially if you have respiratory difficulties such as asthma or bronchitis.</li>
+                                <li class="list-group-item">When indoors, close all windows and doors to limit the entry of volcanic ash. Place damp towels at thresholds.</li>
+                                <li class="list-group-item">Do not tie up phone lines with non-emergency calls.</li>
+                                <li class="list-group-item">If you have to go outside use protective gear such as masks and goggles and keep as much of your skin covered as possible. Wear eyeglasses, not contact lenses as these can cause corneal abrasions.</li>
+                                <li class="list-group-item">Disconnect drainpipes/downspouts from gutters to stop drains clogging. If you use a rainwater collection system for your water supply, disconnect the tank.</li>
+                                <li class="list-group-item">Stay out of designated restricted zones.</li>
+                            </ul>
+                            <hr>
+                            <h2>Links to information about:</h2>
+                            <p>Get Ready Get Thru volcano information&nbsp;
+                                <a href="http://www.getthru.govt.nz/disasters/volcano">http://www.getthru.govt.nz/disasters/volcano</a>
+                            </p>
+                                <p>Food safety in an emergency
+                                <a href="http://www.foodsafety.govt.nz/elibrary/industry/Food_Safety-Recent_Around.htm">http://www.foodsafety.govt.nz/elibrary/industry/Food_Safety-Recent_Around.htm</a>
+                            </p>
+                            <p>State Highway conditions&nbsp;
+                                <a title="New Zealand highway conditions" href="http://www.journeys.nzta.govt.nz/traffic/">http://www.journeys.nzta.govt.nz/traffic/</a>
+                            </p>
+                            <p>Volcano monitoring 
+                                <a href="http://www.geonet.org.nz/">www.geonet.org.nz</a>
+                            </p>
+                            <p>Volcanic damage insurance <a href="http://www.eqc.govt.nz/">www.eqc.govt.nz</a>
+                            </p>
+                            <p>Science of volcanoes
+                                <a href="http://www.gns.cri.nz/">www.gns.cri.nz</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+
+<footer>
+  <nav id="footer-nav-1">
+
+      <div id="social-icon">
+        <img src="images/icon-facebook.svg" alt="facebook icon">
+        <img src="images/icon-twitter.svg" alt="twitter icon">
+        <img src="images/icon-pinterest.svg" alt="pinterest icon">
+        <img src="images/icon-instagram.svg" alt="instagram icon">
+      </div>
+  </nav>
+  <div id="footer-line"></div>
+  <nav id="footer-nav-2">
+    <div>
+    <h4>Our project</h4>
+      <ul>
+        <li><a href="#">How we work</a></li>   
+        <li><a href="#"> Why this project?</a></li>   
+        <li><a href="#">View our other maps</a></li>
+        <li><a href="#">Reviews </a></li>
+      </ul> 
+    </div>
+    
+    <div>
+      <h4>Help me</h4>
+      <ul>
+        <li><a href="#"> FAQ</a></li>
+        <li><a href="#">Terms of use</a> </li>
+        <li><a href="#">Privacy policy</a> </li>
+        <li><a href="#">Cookies</a> </li>
+      </ul>
+    </div>
+   
+
+    <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#"> contact us </a></li>
+          <li><a href="#"> Support </a></li>
+          <li><a href="#"> Live chat </a></li>
+        </ul>
+    </div>
+    
+  </nav>
+  
+</footer>
+
+
+</body>
+</html>
