@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.46.0/dist/L.Control.Locate.min.css" />
+
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   crossorigin=""></script>
+   <script type="module" src="script-resp.js" defer></script>
+   <script type="module" src="responsive.js" defer></script>
+
+    <link rel="stylesheet" href="styles-resp.css">
+
+    <title>The map</title>
+</head>
+
+<body> 
+  
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.46.0/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+
+  <header>
+    
+  <div class='image-logo'> 
+    <img src="images/map-icon.png" alt="logo"> 
+  </div>
+  
+  <nav id="header-nav">
+    <img src="./images/close_white.svg" class="material-icons" id="close-icon" alt="close icon">
+    <ul>
+      <li class="how-we-work"><a href="#" class="how-we-work">WHAT WE ARE</a></li>
+      <li><a href="#">EXPLORE ZONES</a></li>
+      <li id="account"><a href="#">YOUR ACCOUNT</a></li>
+      <li id="view-plans"><a href="#">SCHOOLS FACILITIES</a></li>
+    </ul>
+  </nav>
+
+  <div class="hamburger-containment">
+    <div class="hamburger-line"></div>
+    <div class="hamburger-line"></div>
+    <div class="hamburger-line"></div>
+  </div>
+
+</header>
+
+<main>
+
+<section id="search-container" >
+   <input placeholder="Enter some text" name="name" id="searchbar"/>
+</section>
+
+<section id="map-container">
+    <div id="map"></div>
+</section>
+
+
+</main>
+
+
+
+<footer>
+  <nav id="footer-nav-1">
+ 
+      <div id="social-icon">
+        <img src="images/icon-facebook.svg" alt="facebook icon">
+        <img src="images/icon-twitter.svg" alt="twitter icon">
+        <img src="images/icon-pinterest.svg" alt="pinterest icon">
+        <img src="images/icon-instagram.svg" alt="instagram icon">
+      </div>
+  </nav>
+  <div id="footer-line"></div>
+  <nav id="footer-nav-2">
+    <div>
+    <h4>Our project</h4>
+      <ul>
+        <li><a href="#">How we work</a></li>   
+        <li><a href="#"> Why this project?</a></li>   
+        <li><a href="#">View our other maps</a></li>
+        <li><a href="#">Reviews </a></li>
+      </ul> 
+    </div>
+    
+    <div>
+      <h4>Help me</h4>
+      <ul>
+        <li><a href="#"> FAQ</a></li>
+        <li><a href="#">Terms of use</a> </li>
+        <li><a href="#">Privacy policy</a> </li>
+        <li><a href="#">Cookies</a> </li>
+      </ul>
+    </div>
+   
+
+    <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#"> contact us </a></li>
+          <li><a href="#"> Support </a></li>
+          <li><a href="#"> Live chat </a></li>
+        </ul>
+    </div>
+    
+  </nav>
+  
+</footer>
+
+
+</body>
+</html>
