@@ -29,9 +29,7 @@ header {
 
 .image-logo {
     grid-column: 2;
-    position: absolute;
-    left:50px;
-    align-self: center;
+    align-self: end;
 }
 
 .image-logo img {
@@ -137,8 +135,7 @@ input[type=text] {
       transition: width 0.15s ease-in-out;
    }
  
-   /* When the input field gets focus,
-        change its width to 100% */
+
 input[type=text]:focus {
      width: 70%;
    }
@@ -258,6 +255,7 @@ footer {
     justify-content: center;
     align-items: center;
     border: 1px solid var(--neutral-dark-violet);
+    cursor:pointer;
     }
 
     .hamburger-line {
