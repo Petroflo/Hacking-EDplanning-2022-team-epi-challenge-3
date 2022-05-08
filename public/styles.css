@@ -260,6 +260,8 @@ header {
 
 @media screen and (max-width:425px){
 
+    /* index.html */
+
      body {
         width:375px;
         height: auto;
