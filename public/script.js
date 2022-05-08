@@ -31,6 +31,14 @@ async function doto() {
 console.log(await doto())
 
 function titleL(map){
+    var helloPopup = L.popup()
+     .setContent('The nearest shelter!')
+     .setLatLng([13.993287,-60.967352]);
+
+   L.easyButton('<img src="images/house.png">', function(btn, map){
+       helloPopup.openOn(map);
+   }).addTo(map);
+
     L.control.locate().addTo(map);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
