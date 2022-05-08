@@ -139,7 +139,19 @@ input[type=text]:focus {
      width: 70%;
    }
  
- 
+#search-btn {
+    height:4.5vh;
+    width:auto;
+    background-color: var(--primary-dark-violet);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin-left:1.5em;
+
+}
+   
+
 #map-container {
     width:100%;
     height: auto;
