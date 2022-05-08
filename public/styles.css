@@ -260,25 +260,6 @@ header {
 
 @media screen and (max-width:425px){
 
-
-    /* Warning page */
-    .btn-danger {
-        text-align:center;
-        height:10vh;
-        width:auto;
-        font-size:0.5em;
-    }
-
-    .two_col_middle_inner {
-        text-align:center;
-        font-size:0.8em;
-    }
-
-    .two_col_middle_inner h1 {
-        font-size:1.2em;
-    }
-
-
     /* index.html */
 
      body {
