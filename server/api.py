@@ -5,30 +5,22 @@ import json
 
 app = FastAPI()
 
-#origins = [
-#]
+@app.get('Print Data.json')
+async def get_data():
+    file = open("Data.json", 'r+')
+    data = file.read()
+    file.close()
+    return json.loads(data)
+    #res = requests.get(url)
+    #f = open("get_request.json", 'r+')
+    #f.seek(0)
+    #f.write(res.text)
+    #f.truncate()
+    #f.close()
+    #return json.loads(res.text)
 
-#app.add_middleware(
-#    CORSMiddleware,
-#    allow_origins=origins,
-#    allow_credentials=True,
-#    allow_methods=["*"],
-#    allow_headers=["*"],
-#)
-
-@app.get('/v1/repositories')
-async def Get_all_repository():
-    url = "https://box.iiep.unesco.org/s/LjHcoC7D7L5rAsn"
+@app.get('Get_input')
+async def get_input_search():
+    url = "http://127.0.0.1:5500/public/"
     res = requests.get(url)
-    f = open("get_request.json", 'r+')
-    f.seek(0)
-    f.write(res.text)
-    f.truncate()
-    f.close()
-    return json.loads(res.text)
-
-#@app.get('/v1/omega')
-#async def omega_loader():
-#    with open('omega.json') as f:
-#        data = json.load(f)
-#    return data
+    return res
