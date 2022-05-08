@@ -15,30 +15,43 @@
    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
    crossorigin=""></script>
    <script type="module" src="script.js" defer></script>
+   <script type="module" src="responsive.js" defer></script>
 
     <link rel="stylesheet" href="styles.css">
 
     <title>The map</title>
 </head>
 
-<body>
-
+<body> 
+  
   <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.46.0/dist/L.Control.Locate.min.js" charset="utf-8"></script>
 
   <header>
-
+    
   <div class='image-logo'> 
     <img src="images/map-icon.png" alt="logo"> 
   </div>
-
+  
   <nav id="header-nav">
     <ul>
-      <li class="how-we-work"><a href="#" class="how-we-work">WHAT WE DO</a></li>
-      <li><a href="#">STATS</a></li>
-      <li id="account"><a href="#">ACCOUNT</a></li>
-      <li id="view-plans"><a href="#">VIEW MAPS</a></li>
+      <li class="how-we-work"><a href="#" class="how-we-work">WHAT WE ARE</a></li>
+      <li><a href="#">EXPLORE ZONES</a></li>
+      <li class="account"><a href="#">YOUR ACCOUNT</a></li>
+      <li class="view-plans"><a href="#">EMERGENCY ADVICES</a></li>
     </ul>
   </nav>
+
+  <nav id="header-nav-2">
+    <img src="./images/close_white.svg" class="material-icons" id="close-icon" alt="close icon">
+    <ul>
+      <li class="how-we-work-2"><a href="#">WHAT WE ARE</a></li>
+      <li><a href="#">EXPLORE ZONES</a></li>
+      <li class="account-2"><a href="#">YOUR ACCOUNT</a></li>
+      <li class="view-plans-2"><a href="#">EMERGENCY ADVICES</a></li>
+    </ul>
+  </nav>
+
+ 
 
   <div class="hamburger-containment">
     <div class="hamburger-line"></div>
@@ -52,6 +65,7 @@
 
 <section id="search-container" >
    <input placeholder="Search for schools" name="name" id="searchbar"/>
+   <button id="search-btn">Validate</button>
 </section>
 
 <section id="map-container">
@@ -65,7 +79,7 @@
 
 <footer>
   <nav id="footer-nav-1">
-
+ 
       <div id="social-icon">
         <img src="images/icon-facebook.svg" alt="facebook icon">
         <img src="images/icon-twitter.svg" alt="twitter icon">
